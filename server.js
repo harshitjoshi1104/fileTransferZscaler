@@ -4,7 +4,6 @@ const port=5000
 const multer = require('multer')
 app.use(express.json())
 const path=require('path')
-app.use('/uploads', express.static('uploads'));
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
       cb(null, 'uploads/'); // The destination folder for uploaded files
